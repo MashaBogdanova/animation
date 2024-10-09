@@ -1,0 +1,206 @@
+/* Variables */
+
+html {
+    --color-primary: #DA6A00;
+    --color-primary-light: #EE9B01;
+    --color-secontary: #14471E;
+    --color-secontary-light: #68904D;
+    --color-tertiary: #C8D2D1;
+    --color-tertiary-light: #ffffff;
+    --color-dark: #000000;
+}
+
+/* Common styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-tertiary);
+    padding: 0 60px;
+}
+
+h2 {
+    margin: 40px auto;
+    color: var(--color-secontary-light);
+    text-align: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 120px;
+
+    font-size: 14px;
+    color: var(--color-tertiary-light);
+    text-align: center;
+
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: all 1s;
+}
+
+img {
+    display: block;
+    width: 165px;
+    cursor: pointer;
+
+    transition: transform 1s;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    height: max-content;
+}
+
+#wt-sky-root {
+    display: none;
+}
+
+/* Transition */
+.background:hover {
+    background-color: var(--color-primary-light);
+}
+
+.color:hover {
+    color: var(--color-secontary);
+}
+
+.font-size:hover {
+    font-size: 30px;
+}
+
+.height:hover {
+    height: 110px;
+}
+
+.width:hover {
+    width: 300px;
+}
+
+.letter-spacing:hover {
+    letter-spacing: 3px;
+}
+
+.line-height:hover {
+    line-height: 120px;
+}
+
+.margin-bottom:hover {
+    margin-bottom: 50px;
+}
+
+.margin-top:hover {
+    margin-top: 50px;
+}
+
+.opacity:hover {
+    opacity: .3;
+}
+
+.padding:hover {
+    padding: 20px;
+}
+
+.border-color,
+.border-width {
+    border: 6px solid var(--color-secontary-light);
+}
+
+.border-color:hover {
+    border-color: var(--color-secontary);
+}
+
+.border-width:hover {
+    border-width: 12px;
+}
+
+/* Transform */
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
+.translate:hover {
+    transform: translateX(300px);
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+}
+
+.skew:hover {
+    transform: skew(20deg);
+}
+
+/* Transform-origin */
+
+.transform-origin:hover {
+    transform: rotate(45deg);
+}
+
+.top {
+    transform-origin: top;
+}
+
+.right {
+    transform-origin: right;
+}
+
+.left {
+    transform-origin: left;
+}
+
+.bottom {
+    transform-origin: bottom;
+}
+
+.top-right {
+    transform-origin: top right;
+}
+
+.top-left {
+    transform-origin: top left;
+}
+
+.bottom-right {
+    transform-origin: bottom right;
+}
+
+.bottom-left {
+    transform-origin: bottom left;
+}
+
+/* Perspective */
+
+.perspective {
+    perspective: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rotate-x:hover {
+    transform: rotateX(90deg);
+}
+
+.rotate-y:hover {
+    transform: rotateY(90deg);
+}
+
+.rotate-z:hover {
+    transform: rotateZ(90deg);
+}
+
+.translate-z:hover {
+    transform: translateZ(100px);
+}
