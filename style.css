@@ -6,7 +6,7 @@ html {
     --color-secontary: #14471E;
     --color-secontary-light: #68904D;
     --color-tertiary: #C8D2D1;
-    --color-tertiary-light: #ffffff;
+    --color-light: #ffffff;
     --color-dark: #000000;
 }
 
@@ -36,7 +36,7 @@ button {
     width: 120px;
 
     font-size: 14px;
-    color: var(--color-tertiary-light);
+    color: var(--color-light);
     text-align: center;
 
     background-color: var(--color-primary);
@@ -53,6 +53,14 @@ img {
     cursor: pointer;
 
     transition: transform 1s;
+}
+
+a {
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: var(--color-dark);
+    border: 2px solid var(--color-dark);
 }
 
 .section-content {
@@ -203,4 +211,33 @@ img {
 
 .translate-z:hover {
     transform: translateZ(100px);
+}
+
+/* Examples */
+
+.example-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.example-1:before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-primary-light);
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+    transition: transform 600ms ease-out;
+
+    z-index: -1;
+}
+
+.example-1:hover:before {
+    transform: rotate(0deg);
 }
