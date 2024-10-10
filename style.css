@@ -208,7 +208,8 @@ img {
 /* Examples */
 
 .example-1,
-.example-2 {
+.example-2,
+.example-3 {
     position: relative;
 
     padding: 15px 30px;
@@ -222,7 +223,9 @@ img {
 }
 
 .example-1:before,
-.example-2:before {
+.example-2:before,
+.example-3:before,
+.example-3:after {
     content: '';
 
     position: absolute;
@@ -233,13 +236,12 @@ img {
     width: 100%;
     height: 100%;
 
-
-
     transition: transform 600ms ease-out;
 }
 
 .example-1:hover,
-.example-2:hover {
+.example-2:hover,
+.example-3:hover {
     color: var(--color-light);
 }
 
@@ -262,3 +264,20 @@ img {
     transform: translateX(0);
 }
 
+.example-3:before {
+    background-color: var(--color-secontary);
+    transform: rotateX(90deg);
+}
+
+.example-3:hover:before {
+    transform: rotateX(0);
+}
+
+.example-3:after {
+    background-color: var(--color-secontary);
+    transform: rotateY(90deg);
+}
+
+.example-3:hover:after {
+    transform: rotateY(0);
+}
