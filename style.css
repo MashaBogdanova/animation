@@ -211,12 +211,14 @@ img {
 .example-1,
 .example-2,
 .example-3,
-.example-4 {
+.example-4,
+.example-5 {
     position: relative;
 
     width: 150px;
     height: 70px;
 
+    font-size: 18px;
     color: var(--color-secontary);
     line-height: 66px;
     text-align: center;
@@ -231,7 +233,8 @@ img {
 .example-1:before,
 .example-2:before,
 .example-3:before,
-.example-3:after {
+.example-3:after,
+.example-5:before {
     content: '';
 
     position: absolute;
@@ -299,8 +302,29 @@ img {
 
 .example-4:hover {
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     line-height: 62px;
 
     border: 4px solid var(--color-secontary);
+}
+
+.example-5 {
+    text-transform: uppercase;
+}
+
+.example-5:before {
+    content: 'Yeah!';
+
+    text-transform: uppercase;
+    color: var(--color-light);
+
+    background-color: var(--color-primary-light);
+
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all 400ms ease-out;
+}
+
+.example-5:hover:before {
+    transform: translateY(0);
 }
