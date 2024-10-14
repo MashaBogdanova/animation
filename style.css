@@ -13,7 +13,7 @@ html {
 /* Common styles */
 
 * {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 body {
@@ -212,7 +212,8 @@ img {
 .example-2,
 .example-3,
 .example-4,
-.example-5 {
+.example-5,
+.example-6 {
     position: relative;
 
     width: 150px;
@@ -234,7 +235,8 @@ img {
 .example-2:before,
 .example-3:before,
 .example-3:after,
-.example-5:before {
+.example-5:before,
+.example-6:before {
     content: '';
 
     position: absolute;
@@ -250,7 +252,8 @@ img {
 
 .example-1:hover,
 .example-2:hover,
-.example-3:hover {
+.example-3:hover,
+.example-6:hover {
     color: var(--color-light);
 }
 
@@ -327,4 +330,25 @@ img {
 
 .example-5:hover:before {
     transform: translateY(0);
+}
+
+.example-6 {
+    transition: all 400ms;
+}
+
+.example-6:hover {
+    background-color: var(--color-secontary);
+}
+
+.example-6:before {
+    height: 30px;
+    background-color: var(--color-light);
+
+    z-index: 1;
+    transform: translateX(-100%) translateY(30px) rotate(45deg);
+    transition: all 400ms;
+}
+
+.example-6:hover:before {
+    transform: translateX(100%) rotate(45deg);
 }
