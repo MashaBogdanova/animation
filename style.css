@@ -208,12 +208,7 @@ img {
 
 /* Button examples */
 
-.example-1,
-.example-2,
-.example-3,
-.example-4,
-.example-5,
-.example-6 {
+.example {
     position: relative;
 
     width: 150px;
@@ -228,7 +223,7 @@ img {
     border: 2px solid var(--color-secontary);
     overflow: hidden;
 
-    transition: all 1000ms ease-out;
+    transition: all 800ms ease-out;
 }
 
 .example-1:before,
@@ -236,7 +231,9 @@ img {
 .example-3:before,
 .example-3:after,
 .example-5:before,
-.example-6:before {
+.example-6:before,
+.example-7:before,
+.example-7:after {
     content: '';
 
     position: absolute;
@@ -247,7 +244,7 @@ img {
     width: 100%;
     height: 100%;
 
-    transition: transform 1000ms ease-out;
+    transition: transform 800ms ease-out;
 }
 
 .example-1:hover,
@@ -367,3 +364,23 @@ img {
 
 /* Example 7 */
 
+.example-7:before,
+.example-7:after {
+    content: 'Hover me';
+    color: var(--color-light);
+    background-color: var(--color-secontary);
+    z-index: 1;
+    transition: all 500ms;
+}
+
+.example-7:before {
+    transform: translate(-100%, 100%);
+}
+
+.example-7:hover:before {
+    transform: translate(0, 0);
+}
+
+.example-7:hover:after {
+    transform: translate(100%, -100%);
+}
