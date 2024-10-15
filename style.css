@@ -234,7 +234,9 @@ img {
 .example-6:before,
 .example-7:before,
 .example-7:after,
-.example-8:before {
+.example-8:before,
+.example-9:before,
+.example-10:before {
     content: '';
 
     position: absolute;
@@ -251,7 +253,9 @@ img {
 .example-1:hover,
 .example-2:hover,
 .example-3:hover,
-.example-6:hover {
+.example-6:hover,
+.example-9:hover,
+.example-10:hover {
     color: var(--color-light);
 }
 
@@ -405,4 +409,36 @@ transition: all 500ms;
 .example-8:hover:before {
     opacity: 1;
     transform: scale(1);
+}
+
+/* Example 9 and 10 */
+
+.example-9,
+.example-10 {
+    text-transform: uppercase;
+    transition: all 500ms;
+}
+
+.example-9:before,
+.example-10:before {
+    background-color: var(--color-secontary);
+    transition: all 500ms;
+}
+
+.example-9:before {
+    height: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.example-9:hover:before {
+    height: 190%;
+}
+
+.example-10:before {
+    width: 0;
+    border-radius: 0 50% 50% 0;
+}
+
+.example-10:hover:before {
+    width: 190%;
 }
