@@ -233,12 +233,13 @@ img {
 .example-5:before,
 .example-6:before,
 .example-7:before,
-.example-7:after {
+.example-7:after,
+.example-8:before {
     content: '';
 
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     z-index: -1;
 
     width: 100%;
@@ -383,4 +384,25 @@ img {
 
 .example-7:hover:after {
     transform: translate(100%, -100%);
+}
+
+/* Example 8 */
+
+.example-8 {
+transition: all 500ms;
+}
+
+.example-8:before {
+    content: 'Hover me';
+    color: var(--color-light);
+    background-color: var(--color-secontary);
+    opacity: 0;
+    z-index: 1;
+    transform: scale(5);
+    transition: all 500ms;
+}
+
+.example-8:hover:before {
+    opacity: 1;
+    transform: scale(1);
 }
