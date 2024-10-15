@@ -236,7 +236,11 @@ img {
 .example-7:after,
 .example-8:before,
 .example-9:before,
-.example-10:before {
+.example-10:before,
+.example-11:before,
+.example-11:after,
+.example-12:before,
+.example-12:after {
     content: '';
 
     position: absolute;
@@ -421,7 +425,7 @@ transition: all 500ms;
 
 .example-9:before,
 .example-10:before {
-    background-color: var(--color-secontary);
+    background-color: var(--color-primary-light);
     transition: all 500ms;
 }
 
@@ -441,4 +445,50 @@ transition: all 500ms;
 
 .example-10:hover:before {
     width: 190%;
+}
+
+/* Example 11 and 12 */
+
+.example-11,
+.example-12 {
+    color: var(--color-light);
+    background-color: var(--color-secontary);
+    border: none;
+    text-transform: uppercase;
+    overflow: unset;
+}
+
+.example-11:before,
+.example-11:after,
+.example-12:before,
+.example-12:after {
+    content: 'Hover me';
+    transform: rotateX(270deg);
+    z-index: 1;
+}
+
+.example-11:before,
+.example-12:before {
+    background-color: var(--color-primary-light);
+    transform-origin: top;
+    transition: all 500ms;
+}
+
+.example-11:after {
+    background-color: var(--color-primary);
+    transform-origin: top;
+    transition: all 500ms linear 200ms;
+}
+
+.example-12:after {
+    background-color: var(--color-primary);
+    transform-origin: bottom;
+    transition: all 500ms;
+}
+
+.example-11:hover:before,
+.example-11:hover:after,
+.example-12:hover:before,
+.example-12:hover:after {
+    transform: rotateX(0);
 }
