@@ -61,6 +61,15 @@ img {
     height: max-content;
 }
 
+.section-content-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: max-content;
+}
+
 #wt-sky-root {
     display: none;
 }
@@ -527,16 +536,19 @@ img {
     transform: translate(0) scale(1) rotateY(360deg);
 }
 
-/* Example 14 */
+/* Examples 14 and 15 */
 
-.example-14 {
+.example-14,
+.example-15 {
     position: relative;
 
-    width: 150px;
-    height: 70px;
+    width: 300px;
+    height: 80px;
     margin: auto;
 
-    line-height: 70px;
+    font-size: 18px;
+    line-height: 80px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--color-secondary);
     text-align: center;
@@ -567,24 +579,24 @@ img {
 
 .example-14:before {
     left: 0;
-    box-shadow: -80px 0 0 var(--color-secondary);
+    box-shadow: -100px 0 0 var(--color-secondary);
 }
 
 .example-14:after {
     right: 0;
-    box-shadow: 80px 0 0 var(--color-secondary);
+    box-shadow: 100px 0 0 var(--color-secondary);
 }
 
 .example-14:hover:before {
     left: 50%;
-    box-shadow: 25px 0 0 var(--color-secondary);
+    box-shadow: 30px 0 0 var(--color-secondary);
     opacity: 1;
     transform: translateX(-50%) translateY(-50%);
 }
 
 .example-14:hover:after {
     right: 50%;
-    box-shadow: -25px 0 0 var(--color-secondary);
+    box-shadow: -30px 0 0 var(--color-secondary);
     opacity: 1;
     transform: translateX(50%) translateY(-50%);
 }
@@ -614,3 +626,52 @@ img {
     color: var(--color-light);
     transition-delay: 400ms;
 }
+
+.example-15 {
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    color: var(--color-light);
+    transition: all 200ms;
+}
+
+.example-15:hover {
+    color: var(--color-secondary);
+}
+
+.example-15:before,
+.example-15:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: -1;
+    transition: all 200ms;
+}
+
+.example-15:before {
+    top: -3px;
+    left: -3px;
+    background-color: var(--color-primary-light);
+    transform-origin: top;
+}
+
+.example-15:after {
+    top: 3px;
+    left: 3px;
+    background-color: var(--color-secondary);
+    transform-origin: bottom;
+
+}
+
+.example-15:hover:before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+.example-15:hover:after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);}
