@@ -674,4 +674,70 @@ img {
 .example-15:hover:after {
     top: 6px;
     left: 0;
-    transform: perspective(1000px) rotateX(-75deg);}
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+
+/* Example 16 */
+
+.example-16 {
+    text-transform: uppercase;
+    transition: all 500ms;
+}
+
+.example-16:hover {
+    color: var(--color-light);
+}
+
+.example-16:before,
+.example-16:after,
+.example-16-span:before,
+.example-16-span:after {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    z-index: -1;
+    transition: all 500ms;
+}
+
+.example-16:before {
+    top: 0;
+    left: -25%;
+}
+
+.example-16:hover:before {
+    top: 0;
+    left: 0;
+}
+
+.example-16:after {
+    top: -100%;
+    left: 25%;
+}
+
+.example-16:hover:after {
+    top: 0;
+    left: 25%;
+}
+
+.example-16-span:before {
+    top: 100%;
+    right: 25%;
+}
+
+.example-16:hover .example-16-span:before {
+    top: 0;
+    right: 25%;
+}
+
+.example-16-span:after {
+    top: 0;
+    right: -25%;
+}
+
+.example-16:hover .example-16-span:after {
+    top: 0;
+    right: 0;
+}
