@@ -14,11 +14,15 @@ html {
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--color-tertiary);
-    padding: 0 60px 100px;
 }
 
 h2 {
@@ -27,195 +31,31 @@ h2 {
     text-align: center;
 }
 
-.transition,
-.transform,
-.transform-origin {
-    height: 60px;
-    width: 120px;
-
-    color: var(--color-light);
-    text-align: center;
-    line-height: 60px;
-
-    background-color: var(--color-primary-transparent);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-
-    transition: all 1s;
-}
-
-img {
-    display: block;
-    width: 150px;
-    cursor: pointer;
-
-    transition: transform 1s;
-}
-
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    height: max-content;
-}
-
-.section-content-2 {
+.section-content,
+.section-content-2,
+.section-content-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
     width: 100%;
     height: max-content;
-    margin-top: 50px;
+    padding: 60px;
 }
 
+.section-content {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section-content-3 {
+    background-color: var(--color-secondary);
+}
 
 #wt-sky-root {
     display: none;
-}
-
-/* Transition */
-
-.background:hover {
-    background-color: var(--color-primary-light);
-}
-
-.color:hover {
-    color: var(--color-secondary);
-}
-
-.font-size:hover {
-    font-size: 18px;
-}
-
-.height:hover {
-    height: 70px;
-}
-
-.width:hover {
-    width: 140px;
-}
-
-.letter-spacing:hover {
-    letter-spacing: 1.5px;
-}
-
-.line-height:hover {
-    line-height: 30px;
-}
-
-.margin-bottom:hover {
-    margin-bottom: 20px;
-}
-
-.margin-top:hover {
-    margin-top: 20px;
-}
-
-.opacity:hover {
-    opacity: .3;
-}
-
-.padding:hover {
-    padding: 10px;
-}
-
-.border-color,
-.border-width {
-    line-height: 56px;
-    border: 2px solid var(--color-secondary);
-}
-
-.border-color:hover {
-    border-color: var(--color-primary-light);
-}
-
-.border-width:hover {
-    border-width: 6px;
-    line-height: 48px;
-}
-
-/* Transform */
-
-.scale:hover {
-    transform: scale(1.2);
-}
-
-.translate:hover {
-    transform: translateX(300px);
-}
-
-.rotate:hover {
-    transform: rotate(180deg);
-}
-
-.skew:hover {
-    transform: skew(20deg);
-}
-
-/* Transform-origin */
-
-.transform-origin:hover {
-    transform: rotate(20deg);
-}
-
-.top {
-    transform-origin: top;
-}
-
-.right {
-    transform-origin: right;
-}
-
-.left {
-    transform-origin: left;
-}
-
-.bottom {
-    transform-origin: bottom;
-}
-
-.top-right {
-    transform-origin: top right;
-}
-
-.top-left {
-    transform-origin: top left;
-}
-
-.bottom-right {
-    transform-origin: bottom right;
-}
-
-.bottom-left {
-    transform-origin: bottom left;
-}
-
-/* Perspective */
-
-.perspective {
-    perspective: 500px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.rotate-x:hover {
-    transform: rotateX(90deg);
-}
-
-.rotate-y:hover {
-    transform: rotateY(90deg);
-}
-
-.rotate-z:hover {
-    transform: rotateZ(90deg);
-}
-
-.translate-z:hover {
-    transform: translateZ(100px);
 }
 
 /* Button examples */
@@ -1026,4 +866,53 @@ img {
 
 .example-22:hover:after {
     transform: skewX(0deg) translate(-2px, 0);
+}
+
+/* Example 23 */
+
+.example-23 {
+    position: relative;
+    padding: 25px 50px;
+
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777777;
+
+    background-color: var(--color-light);
+    border-radius: 100px;
+
+    transition: all 200ms;
+}
+
+.example-23:before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-light);
+    border-radius: 100px;
+
+    z-index: -1;
+    transition: all 400ms;
+}
+
+.example-23:hover:before {
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+}
+
+.example-23:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.example-23:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
