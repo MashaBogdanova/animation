@@ -25,12 +25,6 @@ body {
     background-color: var(--color-tertiary);
 }
 
-h2 {
-    margin: 40px auto;
-    color: var(--color-secondary);
-    text-align: center;
-}
-
 .section-content,
 .section-content-2,
 .section-content-3 {
@@ -50,6 +44,10 @@ h2 {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.section-content-2 {
+    row-gap: 80px;
 }
 
 .section-content-3 {
@@ -974,4 +972,132 @@ h2 {
 .example-24:after {
     border-left: 40px solid transparent;
     transform: translateX(100%);
+}
+
+/* Example 25 */
+
+.example-25 {
+    position: relative;
+
+    padding: 20px 35px;
+
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-secondary);
+
+    border: 2px solid var(--color-secondary);
+
+    transition: all 500ms;
+}
+
+.example-25:hover {
+    color: var(--color-light);
+    border: 2px solid transparent;
+}
+
+.example-25:before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-secondary);
+
+    z-index: -1;
+    transform: scale(0);
+    transition: all 500ms;
+}
+
+.example-25:hover:before {
+    transform: scale(1);
+    transition-delay: 500ms;
+    box-shadow: 0 0 10px var(--color-secondary),
+    0 0 30px var(--color-secondary),
+    0 0 60px var(--color-secondary);
+}
+
+.example-25-span {
+    position: absolute;
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary),
+    0 0 20px var(--color-secondary),
+    0 0 30px var(--color-secondary),
+    0 0 50px var(--color-secondary),
+    0 0 100px var(--color-secondary);
+}
+
+.example-25-span1,
+.example-25-span3 {
+    width: 40px;
+    height: 4px;
+}
+
+.example-25-span2,
+.example-25-span4 {
+    width: 4px;
+    height: 40px;
+}
+
+.example-25-span1,
+.example-25-span3 {
+    top: calc(50% - 2px);
+    transition: all 500ms ease-in-out;
+    transition-delay: 250ms;
+}
+
+.example-25-span1 {
+    left: -50px;
+    transform-origin: left;
+}
+
+.example-25:hover .example-25-span1 {
+    left: 50%;
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.example-25-span3 {
+    right: -50px;
+    transform-origin: right;
+}
+
+.example-25:hover .example-25-span3 {
+    right: 50%;
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.example-25-span2,
+.example-25-span4 {
+    left: calc(50% - 2px);
+    transition: all 500ms ease-in-out;
+    transition-delay: 250ms;
+}
+
+.example-25-span2 {
+    top: -50px;
+    transform-origin: top;
+}
+
+.example-25:hover .example-25-span2 {
+    top: 50%;
+    transform: scaleY(0);
+    transition-delay: 0s;
+}
+
+.example-25-span4 {
+    bottom: -50px;
+    transform-origin: bottom;
+}
+
+.example-25:hover .example-25-span4 {
+    bottom: 50%;
+    transform: scaleY(0);
+    transition-delay: 0s;
 }
