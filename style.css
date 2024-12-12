@@ -950,3 +950,10 @@ html {
     transform: scaleY(0);
     transition-delay: 0s;
 }
+
+/* Images */
+
+.image {
+    width: 400px;
+    height: 400px;
+}
